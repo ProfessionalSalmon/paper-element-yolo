@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 3
+names: ['figure', 'table', 'text']
+
+roboflow:
+  workspace: tokyo-fjwy4
+  project: tft-id-cjkvr
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/tokyo-fjwy4/tft-id-cjkvr/dataset/1

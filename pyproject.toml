@@ -1,0 +1,20 @@
+[project]
+name = "yolo11-tut"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "ProfessionalSalmon <terra.keerati@gmail.com>"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "ultralytics (>=8.3.163,<9.0.0)",
+    "roboflow (>=1.2.1,<2.0.0)",
+    "matplotlib (>=3.10.3,<4.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
