@@ -15,6 +15,23 @@ This project demonstrates how to:
 - **Source**: [Roboflow Universe](https://universe.roboflow.com/huyifei/tft-id)
 - **Classes**: 3 classes (figure, table, text)
 
+## Model Performance
+
+![confusion-matrix](notebooks/runs/predict/confusion_matrix.png)
+
+![comparison](notebooks/runs/predict/test_comparison.png)
+
+The trained model achieves the following performance metrics on the validation set:
+- **mAP@0.5**: 87.2%
+- **mAP@0.5:0.95**: 69.9%
+- **Precision**: 84.8%
+- **Recall**: 87.5%
+
+### Per-Class Performance:
+- **Figure**: 99.5% mAP@0.5
+- **Table**: 72.0% mAP@0.5
+- **Text**: 90.1% mAP@0.5
+
 ## Setup
 
 ### Prerequisites
@@ -113,21 +130,14 @@ results = model.predict(
   - `figure`: Visual figures and charts
   - `table`: Data tables
   - `text`: Text blocks and paragraphs
+
+| ID | Class   |
+|----|---------|
+| 0  | figure  |
+| 1  | table   |
+| 2  | text    |
 - **Format**: YOLO format with bounding box annotations
 - **Split**: Train/Validation/Test sets included
-
-## Model Performance
-
-The trained model achieves the following performance metrics on the validation set:
-- **mAP@0.5**: 87.2%
-- **mAP@0.5:0.95**: 69.9%
-- **Precision**: 84.8%
-- **Recall**: 87.5%
-
-### Per-Class Performance:
-- **Figure**: 99.5% mAP@0.5
-- **Table**: 72.0% mAP@0.5
-- **Text**: 90.1% mAP@0.5
 
 ## Project Structure
 
@@ -163,7 +173,3 @@ yolo11-tut/
 - Training results are saved in the `runs/train/` directory
 - Prediction results are saved in the `runs/predict/` directory
 - Model weights are saved as `best.pt` and `last.pt` in the training output directory
-
-## License
-
-This project is for educational purposes. The TFT-ID dataset is licensed under CC BY 4.0.
